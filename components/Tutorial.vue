@@ -66,7 +66,8 @@ export default {
   data() {
     return {
       message : 'Powerhuman FE',
-      link: 'https://github.com/wildan1112'
+      link: 'https://github.com/wildan1112',
+      github: 'https://google.com'
     }
   }
 }
