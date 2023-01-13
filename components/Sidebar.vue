@@ -4,9 +4,9 @@
     <div class="hidden lg:block fixed lg:max-w-[295px] w-full overflow-y-auto h-full bg-white z-[999]" id="sidebarHRIS">
         <div class="px-6 py-[50px] gap-y-[50px] flex flex-col">
             <div class="flex items-center justify-between">
-                <a href="#" class="flex justify-center">
+                <NuxtLink to="/" class="flex justify-center">
                     <img src="/assets/svgs/logo-type.svg" alt="">
-                </a>
+                </NuxtLink>
                 <a href="#" id="toggleCloseSidebar" class="lg:hidden">
                     <svg class="w-6 h-6 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                         xmlns="http://www.w3.org/2000/svg">
@@ -17,22 +17,22 @@
             </div>
             <div class="flex flex-col gap-4">
                 <div class="text-sm text-grey">Daily Use</div>
-                <a href="index.html" class="nav-link active">
+                <NuxtLink :to="{name: 'index'}" class="nav-link">
                     <img src="/assets/svgs/ic-grid.svg" alt="">
                     Overview
-                </a>
-                <a href="employees.html" class="nav-link">
+                </NuxtLink>
+                <NuxtLink :to="{name: 'employees'}" class="nav-link">
                     <img src="/assets/svgs/ic-users.svg" alt="">
                     Employees
-                </a>
-                <a href="my_teams.html" class="nav-link">
+                </NuxtLink>
+                <NuxtLink :to="{name: 'teams'}" class="nav-link">
                     <img src="/assets/svgs/ic-briefcase.svg" alt="">
                     My Teams
-                </a>
-                <a href="roles.html" class="nav-link">
+                </NuxtLink>
+                <NuxtLink :to="{name: 'roles'}" class="nav-link">
                     <img src="/assets/svgs/ic-flag.svg" alt="">
                     Roles
-                </a>
+                </NuxtLink>
             </div>
             <div class="flex flex-col gap-4">
                 <div class="text-sm text-grey">Others</div>
@@ -59,7 +59,11 @@
             </div>
         </div>
     </div>
-
-    <Nuxt />
   </div>
 </template>
+
+<script>
+export default {
+
+}
+</script>
