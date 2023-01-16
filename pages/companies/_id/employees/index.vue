@@ -127,7 +127,7 @@
             <p class="text-center text-grey">
               iOS Engineer
             </p>
-            <a href="#verify" class="text-blue-700 mt-[30px] underline relative z-20">
+            <a href="#verify" class="relative z-20 px-4 py-2 mt-6 text-white bg-blue-700 border-blue-700 rounded-full">
               Verify Now
             </a>
           </div>
@@ -186,7 +186,7 @@
             <p class="text-center text-grey">
               iOS Engineer
             </p>
-            <a href="#verify" class="text-blue-700 mt-[30px] underline relative z-20">
+            <a href="#verify" class="relative z-20 px-4 py-2 mt-6 text-white bg-blue-700 border-blue-700 rounded-full">
               Verify Now
             </a>
           </div>
@@ -215,5 +215,9 @@
 <script>
 export default {
   layout: 'dashboard',
+  middleware: 'auth',
+  head: {
+    title: 'Powerhuman | Employees'
+  }
 }
 </script>
