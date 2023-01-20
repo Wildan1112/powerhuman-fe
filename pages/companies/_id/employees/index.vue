@@ -88,123 +88,26 @@
         </div>
 
         <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:gap-10 lg:gap-3">
+          <p v-if="$fetchState.pending">Fething Data...</p>
           <!-- Card -->
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
+          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0" v-else v-for="employee in employees.data.result.data">
             <a href="#" class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"></a>
-            <img src="/assets/images/user-f-1.png" width="70" alt="">
+            <img :src="employee.photo" width="60" alt="employee.name" class="rounded-full">
             <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Andini Danna
+              {{ employee.name }}
             </div>
             <p class="text-center text-grey">
-              Product Designer
+              {{ employee.role.name }}
             </p>
-            <div class="mt-[30px] text-success flex items-center gap-[6px]">
+            <div class="mt-[30px] text-success flex items-center gap-[6px]" v-if="employee.verified_at">
               <img src="/assets//svgs/ic-check-circle.svg" alt="">
               Verified
             </div>
-          </div>
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a href="#" class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"></a>
-            <img src="/assets/images/user-m-1.png" width="70" alt="">
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Ferrari Three
-            </div>
-            <p class="text-center text-grey">
-              Quality Manager
-            </p>
-            <div class="mt-[30px] text-success flex items-center gap-[6px]">
-              <img src="/assets//svgs/ic-check-circle.svg" alt="">
-              Verified
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a href="#" class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"></a>
-            <img src="/assets/images/user-m-2.png" width="70" alt="">
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Sapiire Muke
-            </div>
-            <p class="text-center text-grey">
-              iOS Engineer
-            </p>
-            <a href="#verify" class="relative z-20 px-4 py-2 mt-6 text-white bg-blue-700 border-blue-700 rounded-full">
+            <a v-else href="#verify" class="relative z-20 px-4 py-2 mt-6 text-white bg-blue-700 border-blue-700 rounded-full">
               Verify Now
             </a>
           </div>
-          <!-- Card -->
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a href="#" class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"></a>
-            <img src="/assets/images/user-f-2.png" width="70" alt="">
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Mw Kemanna
-            </div>
-            <p class="text-center text-grey">
-              Website Developer
-            </p>
-            <div class="mt-[30px] text-success flex items-center gap-[6px]">
-              <img src="/assets//svgs/ic-check-circle.svg" alt="">
-              Verified
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a href="#" class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"></a>
-            <img src="/assets/images/user-m-3.png" width="70" alt="">
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Onna Appa
-            </div>
-            <p class="text-center text-grey">
-              Product Designer
-            </p>
-            <div class="mt-[30px] text-success flex items-center gap-[6px]">
-              <img src="/assets//svgs/ic-check-circle.svg" alt="">
-              Verified
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a href="#" class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"></a>
-            <img src="/assets/images/user-f-3.png" width="70" alt="">
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Hehe Nadiia
-            </div>
-            <p class="text-center text-grey">
-              Quality Manager
-            </p>
-            <div class="mt-[30px] text-success flex items-center gap-[6px]">
-              <img src="/assets//svgs/ic-check-circle.svg" alt="">
-              Verified
-            </div>
-          </div>
-          <!-- Card -->
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a href="#" class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"></a>
-            <img src="/assets/images/user-m-4.png" width="70" alt="">
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Jamboel
-            </div>
-            <p class="text-center text-grey">
-              iOS Engineer
-            </p>
-            <a href="#verify" class="relative z-20 px-4 py-2 mt-6 text-white bg-blue-700 border-blue-700 rounded-full">
-              Verify Now
-            </a>
-          </div>
-          <!-- Card -->
-          <div class="items-center card py-6 md:!py-10 md:!px-[38px] !gap-y-0">
-            <a href="#" class="absolute inset-0 focus:ring-2 ring-primary rounded-[26px]"></a>
-            <img src="/assets/images/user-f-4.png" width="70" alt="">
-            <div class="mt-6 mb-1 font-semibold text-center text-dark">
-              Eksis Melita
-            </div>
-            <p class="text-center text-grey">
-              Website Developer
-            </p>
-            <div class="mt-[30px] text-success flex items-center gap-[6px]">
-              <img src="/assets//svgs/ic-check-circle.svg" alt="">
-              Verified
-            </div>
-          </div>
+
         </div>
       </section>
 
@@ -218,6 +121,20 @@ export default {
   middleware: 'auth',
   head: {
     title: 'Powerhuman | Employees'
+  },
+  data() {
+    return {
+        employees: [],
+    }
+  },
+  async fetch() {
+      this.employees = await this.$axios.get('/employee', {
+          params: {
+              // company_id: 1,
+              company_id: this.$route.params.id,
+              limit: 100,
+          }
+    })
   }
 }
 </script>
