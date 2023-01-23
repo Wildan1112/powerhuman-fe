@@ -37,7 +37,7 @@
                         </div>
                         <p class="text-grey">Empower company</p>
                     </div>
-                    <NuxtLink :to="{name: 'teams-create'}" class="btn btn-primary">Build New Team</NuxtLink>
+                    <NuxtLink :to="{name: 'companies-id-teams-create'}" class="btn btn-primary">Build New Team</NuxtLink>
                 </div>
             </div>
 
