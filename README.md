@@ -1,5 +1,8 @@
 # powerhuman-fe
 
+## Demo
+https://powerhumansss.netlify.app/
+
 ## Build Setup
 
 ```bash
